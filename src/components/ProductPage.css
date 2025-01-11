@@ -1,0 +1,158 @@
+/* General container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Loading Spinner */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Product Cards */
+  .card {
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    padding-bottom: 100px;
+  }
+  
+  .card-img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .card img {
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .product-overlay {
+    opacity: 1;
+  }
+  
+  .product-overlay ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-overlay a {
+    margin: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Color Dot */
+  .product-color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+  
+  .color-dot-red {
+    background-color: red;
+  }
+  
+  .color-dot-blue {
+    background-color: blue;
+  }
+  
+  .color-dot-black {
+    background-color: black;
+  }
+  
+  /* Star Rating */
+  .fa-star {
+    margin-right: 2px;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer .footer-link-list li {
+    margin: 10px 0;
+  }
+  
+  footer .footer-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer .footer-icons a {
+    color: white;
+  }
+  
+  footer .footer-icons li:hover {
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+  
+  footer .input-group {
+    max-width: 300px;
+  }
+  
+  footer .border-top {
+    border-top: 1px solid #444;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .col-md-4 {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
